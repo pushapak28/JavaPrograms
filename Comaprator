@@ -1,0 +1,26 @@
+package com.collections;
+
+import java.util.*;
+
+public class App {
+
+	public static void main(String[] args) {
+			
+		ArrayList<Person> per = new ArrayList<Person>();
+		per.add(new Person("Rahul","Orai",23));
+		per.add(new Person("Sanjay","Kanpur",26));
+		per.add(new Person("Ajay","Kalpi",33));
+		per.add(new Person("Pushpak","Konch",53));
+
+		Collections.sort(per, new Comparator<Person>() {
+			public int compare(Person p1,Person p2) {
+				return p1.getName().compareTo(p2.getName());
+			}
+		});
+		for(Person p : per) {
+			System.out.println(p);
+		}
+	
+	}
+
+}
